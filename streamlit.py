@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 
-model = joblib.load('XGB_class.pkl')
+model = joblib.load('XGB.pkl')
 top_surnames = joblib.load("top_surnames.pkl")
 OneHot_Geography = joblib.load('OneHot_Geography.pkl')
 OneHot_Gender = joblib.load('OneHot_Gender.pkl')
