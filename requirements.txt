@@ -3,4 +3,4 @@ joblib
 numpy==1.24.3
 pandas==2.1.4
 scikit-learn==1.2.1
-xgboost
+xgboost==2.0.2
