@@ -25,8 +25,9 @@ def main():
     age = st.number_input("Age", 0, 100)
     balance = st.number_input('Balance Amount', 0, 1000000)
     NumOfProducts = st.number_input("Number of bank products you hold")
-    HasCrCard = st.radio("Do you have a credit card from this bank?", ["Yes", "No"])
-    IsActiveMember = st.radio("Do you have an active membership status with this bank?", ["Yes", "No"])
+    options = {"Yes": 1, "No": 0}
+    HasCrCard = options[st.radio("Do you have a credit card from this bank?", options.keys())]
+    IsActiveMember = options[st.radio("Do you have an active membership status with this bank?", options.keys())]
     EstimatedSalary=st.number_input("Estimation of your salary", 0,1000000)
     
     
