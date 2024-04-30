@@ -29,6 +29,9 @@ def main():
     IsActiveMember = st.radio("Do you have an active membership status with this bank?",["Yes", "No"])
     EstimatedSalary=st.number_input("Estimation of your salary", 0,1000000)
     
+    options = {"Yes":1, "No":0}
+    HasCrCard = HasCrCard.replace(options)
+    IsActiveMember = IsActiveMember.replace(options)
     
     data = {'Age': int(age), 'Credit Score' : int(credit_score), 'Tenure':int(tenure),'Gender': str(gender), 'Surname':str(surname),'Geography':str(geography),
         'Balance': float(balance), 'NumOfProducts':int(NumOfProducts),
