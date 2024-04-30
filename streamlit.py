@@ -59,7 +59,10 @@ def main():
     if st.button('Make Prediction'):
         data=df      
         result = make_prediction(data)
-        st.success(f'The prediction is: {result}')
+        if(result == 0):
+            st.success('Will Churn')
+        else:
+            st.success('Will Not Churn')
 
 def make_prediction(data):
     input_array = np.array(data).reshape(1, -1)
